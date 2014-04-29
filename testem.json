@@ -1,0 +1,7 @@
+{
+  "src_files": [
+    "www/lib/**/*.js",
+    "www/js/**/*.js",
+    "spec/**/*.js"
+  ]
+}
