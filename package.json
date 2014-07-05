@@ -11,7 +11,9 @@
 	"protractor": ">=0.8.0",
 	"jasmine-given": "~2.1.0",
 	"selenium-standalone": "*",
-	"testem": "*"
+	"testem": "*",
+	"grunt": "*",
+	"grunt-cli": "*"
   },
   "devDependencies": {
     "bower": "^1.3.3",
