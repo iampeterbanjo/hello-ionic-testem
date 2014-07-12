@@ -3,9 +3,11 @@ module.exports = function(grunt){
 
     pkg: grunt.file.readJSON('package.json'),
 
-    pathSpecE2e: ['Gruntfile.js', './www/js/**/*.js', './www/**/*.html', 'protractor.conf.js', './tests/spec-e2e/*.js'],
+    pathSpecE2e: ['Gruntfile.js', './scss/**/*.scss', './www/js/**/*.js', './www/**/*.html', 'protractor.conf.js', './tests/spec-e2e/*.js'],
 
     pathSpec: ['Gruntfile.js', './www/js/**/*.js', './tests/spec/*.js'],
+
+    pathDev: ['Gruntfile.js', './scss/**/*.scss', './www/js/**/*.js', './tests/spec/*.js', './www/**/*.html'],
 
     concat: {
       options: {
@@ -79,7 +81,7 @@ module.exports = function(grunt){
 
       e2e: {
         files: ['<%= pathSpecE2e %>'],
-        tasks: ['jshint', 'concat', 'e2e'],
+        tasks: ['sass', 'jshint', 'concat', 'e2e'],
         options: {
           spawn: false,
         },
@@ -87,10 +89,19 @@ module.exports = function(grunt){
 
       spec: {
         files: ['<%= pathSpec %>'],
-        tasks: ['jshint', 'concat'],
+        tasks: ['sass', 'jshint', 'concat'],
         options: {
-          spawn: false,
+        	spawn: false
         },
+      },
+
+      dev: {
+      	files: ['<%= pathDev %>'],
+      	tasks: ['sass', 'jshint', 'concat'],
+      	options: {
+      		spawn: false
+					, livereload: true
+      	},
       },
 
       css: {
