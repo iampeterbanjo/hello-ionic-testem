@@ -13,6 +13,28 @@ $ ionic run
 $ testem
 ```
 
+## Development
+
+Run the following (in separate terminals if necessary)
+
+- `npm install` *installs project dependencies using npm (requires nodejs installed)*
+- `start-selenium` *starts a selenium server that Protractor can use to run end-to-end tests*
+- `ionic serve 9999` or `cd www/ && python -m SimpleHTTPServer 9999` or `cd www/ && python -m http.server` *starts a web server for the static files which is needed by the end-to-end tests*
+- `grunt watch:dev` *sass, lints, concats and livereload*
+- `grunt watch:e2e` *lints, concats and runs end-to-end tests*
+- `grunt watch:spec` *lints, concats for unit tests*
+- `testem` *runs unit tests*
+
+### Using livereload
+- Install the [browser extensions](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-)
+
+## Notes
+
+You can use `ionic serve` to start a web server with livereload
+
+## Issues
+Cannot find chrome Driver on grunt protractor. Run `./node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update`
+
 ## Using Sass (optional)
 
 This project makes it easy to use Sass (the SCSS syntax) in your projects. This enables you to override styles from Ionic, and benefit from
