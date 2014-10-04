@@ -6,11 +6,18 @@ A starting project for Ionic that optionally supports using custom SCSS and usin
 ## Using this project
 
 ```bash
+// quick start
 $ git clone https://this-repo.git
+$ cd /path/to/this/repo/hello-ionic-testem
 $ sudo npm install -g cordova ionic gulp testem
 $ npm install
 $ ionic run
 $ testem
+
+// use your own repository
+git remote add origin git@somebucketorhub.org:yourcoolname/repo.git
+git push -u origin --all # pushes up the repo and its refs for the first time
+git push -u origin --tags # pushes up any tags
 ```
 
 ## Development
