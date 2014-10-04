@@ -1,6 +1,6 @@
 ﻿describe('routes in app', function () {
 	beforeEach(function () {
-		angular.mock.module('starter')
+		angular.mock.module('starter.routes')
 	})
 
 	beforeEach(inject(function ($state, $urlRouter) {
