@@ -6,12 +6,41 @@ A starting project for Ionic that optionally supports using custom SCSS and usin
 ## Using this project
 
 ```bash
+// quick start
 $ git clone https://this-repo.git
+$ cd /path/to/this/repo/hello-ionic-testem
 $ sudo npm install -g cordova ionic gulp testem
 $ npm install
 $ ionic run
 $ testem
+
+// use your own repository
+git remote add origin https://somebucketorhub.org/yourcoolname/repo.git
+git push -u origin --all # pushes up the repo and its refs for the first time
+git push -u origin --tags # pushes up any tags
 ```
+
+## Development
+
+Run the following (in separate terminals if necessary)
+
+- `npm install` *installs project dependencies using npm (requires nodejs installed)*
+- `start-selenium` *starts a selenium server that Protractor can use to run end-to-end tests*
+- `ionic serve 9999` or `cd www/ && python -m SimpleHTTPServer 9999` or `cd www/ && python -m http.server` *starts a web server for the static files which is needed by the end-to-end tests*
+- `grunt watch:dev` *sass, lints, concats and livereload*
+- `grunt watch:e2e` *lints, concats and runs end-to-end tests*
+- `grunt watch:spec` *lints, concats for unit tests*
+- `testem` *runs unit tests*
+
+### Using livereload
+- Install the [browser extensions](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-)
+
+## Notes
+
+You can use `ionic serve` to start a web server with livereload
+
+## Issues
+Cannot find chrome Driver on grunt protractor. Run `./node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update`
 
 ## Using Sass (optional)
 
