@@ -15,7 +15,7 @@ $ ionic run
 $ testem
 
 // use your own repository
-git remote add origin git@somebucketorhub.org:yourcoolname/repo.git
+git remote add origin https://somebucketorhub.org/yourcoolname/repo.git
 git push -u origin --all # pushes up the repo and its refs for the first time
 git push -u origin --tags # pushes up any tags
 ```
